@@ -1,0 +1,1 @@
+import{L as r,b as n,c as o,e as t}from"./chunk-VCRJ4HTT.js";o();var e=n(t(),1);function d({data:i}){return(0,e.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:r(i)}})}export{d as a};

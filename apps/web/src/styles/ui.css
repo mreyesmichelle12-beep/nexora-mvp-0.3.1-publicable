@@ -1,0 +1,48 @@
+/* ───── Botones ───── */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 2.75rem; padding: 0 1.25rem; border-radius: var(--radius); border: 1px solid transparent; font-weight: 600; font-size: 1rem; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color .15s, border-color .15s; text-align: center; }
+.btn--sm { min-height: 2.25rem; padding: 0 .85rem; font-size: .9375rem; }
+.btn--lg { min-height: 3rem; padding: 0 1.6rem; font-size: 1.0625rem; }
+.btn--primary { background: var(--brand); color: #fff; }
+.btn--primary:hover { background: var(--brand-hover); color: #fff; }
+.btn--secondary { background: #fff; color: var(--ink); border-color: rgba(10,39,68,.3); }
+.btn--secondary:hover { border-color: var(--ink); background: var(--mist); color: var(--ink); }
+.btn--ghost { background: transparent; color: var(--ink); }
+.btn--ghost:hover { background: var(--mist); color: var(--ink); }
+.btn--danger { background: var(--bad); color: #fff; }
+.btn--danger:hover { background: #8F1B12; color: #fff; }
+.btn--on-dark { background: #fff; color: var(--ink); }
+.btn--on-dark:hover { background: var(--brand-tint); color: var(--ink); }
+.btn--outline-on-dark { background: transparent; color: #fff; border-color: rgba(255,255,255,.55); }
+.btn--outline-on-dark:hover { background: rgba(255,255,255,.1); color: #fff; border-color: #fff; }
+.btn[disabled], .btn[aria-disabled="true"] { opacity: .6; cursor: not-allowed; }
+.btn__spinner { width: 1rem; height: 1rem; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ───── Campos ───── */
+.field { display: grid; gap: .4rem; }
+.field__label { font-weight: 600; font-size: .9375rem; }
+.field__opt { font-weight: 400; color: var(--muted); margin-left: .35rem; }
+.field__control { min-height: 2.75rem; width: 100%; padding: .55rem .9rem; border-radius: var(--radius); border: 1px solid rgba(10,39,68,.4); background: #fff; font-size: 1rem; }
+textarea.field__control { min-height: 9rem; resize: vertical; line-height: 1.5; }
+.field__control:hover { border-color: var(--ink); }
+.field__control[aria-invalid="true"] { border: 2px solid var(--bad); }
+.field__hint { font-size: .9rem; color: var(--muted); }
+.field__error { display: flex; gap: .4rem; align-items: flex-start; font-size: .9375rem; font-weight: 600; color: var(--bad); }
+.field__error svg { margin-top: .2rem; flex: none; }
+
+/* ───── Badge / Card / Banner ───── */
+.badge { display: inline-flex; align-items: center; gap: .4rem; padding: .15rem .65rem; border-radius: 999px; border: 1px solid var(--line); background: var(--mist); color: var(--muted); font-size: .875rem; font-weight: 600; line-height: 1.5; }
+.badge--brand { background: var(--brand-tint); color: var(--brand); border-color: rgba(91,47,196,.2); }
+.badge--ok { background: var(--ok-tint); color: var(--ok); border-color: rgba(15,123,95,.25); }
+.badge--warn { background: var(--warn-tint); color: var(--warn); border-color: rgba(138,82,0,.25); }
+.badge--bad { background: var(--bad-tint); color: var(--bad); border-color: rgba(180,35,24,.25); }
+.card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(1.25rem, 3vw, 1.75rem); box-shadow: var(--shadow); }
+.demo-banner { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .25rem 1rem; padding: .5rem 1rem; background: var(--warn-tint); color: var(--warn); font-size: .9375rem; font-weight: 700; }
+.demo-banner span { display: inline-flex; align-items: center; gap: .5rem; }
+
+/* ───── Estados no ideales ───── */
+.state { display: flex; flex-direction: column; align-items: center; gap: .75rem; padding: 2.25rem 1.5rem; text-align: center; border: 1px dashed #B8C3DA; border-radius: var(--radius-lg); background: rgba(244,246,252,.6); }
+.state p { color: var(--muted); }
+.state__icon { width: 2rem; height: 2rem; }
+.state__icon--brand { color: var(--brand); } .state__icon--bad { color: var(--bad); } .state__icon--ok { color: var(--ok); } .state__icon--warn { color: var(--warn); } .state__icon--muted { color: var(--muted); }
+.state__icon--spin { animation: spin 1s linear infinite; }

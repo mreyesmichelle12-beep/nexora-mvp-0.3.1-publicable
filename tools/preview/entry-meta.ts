@@ -1,0 +1,23 @@
+// Importa los `metadata` reales de cada página, sitemap y robots para auditarlos en Node.
+import { metadata as home } from "@/app/(public)/page";
+import { metadata as nosotros } from "@/app/(public)/nosotros/page";
+import { metadata as plataforma } from "@/app/(public)/plataforma/page";
+import { metadata as funciones } from "@/app/(public)/funciones/page";
+import { metadata as estudiantes } from "@/app/(public)/estudiantes/page";
+import { metadata as docentes } from "@/app/(public)/docentes/page";
+import { metadata as productos } from "@/app/(public)/productos/page";
+import { metadata as impacto } from "@/app/(public)/impacto-social/page";
+import { metadata as planes } from "@/app/(public)/planes/page";
+import { metadata as faq } from "@/app/(public)/faq/page";
+import { metadata as contacto } from "@/app/(public)/contacto/page";
+import { metadata as privacidad } from "@/app/(public)/privacidad/page";
+import { metadata as terminos } from "@/app/(public)/terminos/page";
+import { metadata as aviso } from "@/app/(public)/aviso-legal/page";
+import { metadata as cookies } from "@/app/(public)/cookies/page";
+import { metadata as demo } from "@/app/(public)/demo/page";
+import { metadata as login } from "@/app/(public)/iniciar-sesion/page";
+import { metadata as registro } from "@/app/(public)/registro/page";
+import sitemap from "@/app/sitemap";
+import robots from "@/app/robots";
+const pages = { "/": home, "/nosotros": nosotros, "/plataforma": plataforma, "/funciones": funciones, "/estudiantes": estudiantes, "/docentes": docentes, "/productos": productos, "/impacto-social": impacto, "/planes": planes, "/faq": faq, "/contacto": contacto, "/privacidad": privacidad, "/terminos": terminos, "/aviso-legal": aviso, "/cookies": cookies, "/demo": demo, "/iniciar-sesion": login, "/registro": registro };
+console.log(JSON.stringify({ pages, sitemap: sitemap(), robots: robots() }));

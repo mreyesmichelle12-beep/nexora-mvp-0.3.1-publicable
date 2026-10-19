@@ -1,0 +1,1 @@
+import{G as m,H as p,b as e,c as n,e as o,g as r,h as c,i as t,j as a,k as i,n as s,q as d}from"./chunk-VCRJ4HTT.js";n();var u=e(o()),k={Network:s,Video:c,BookOpen:p,Sparkles:i,Users:t,MessageSquare:d,CalendarDays:m,Wrench:r,TrendingUp:a};function h({name:I,size:N=22}){let f=k[I];return(0,u.jsx)(f,{"aria-hidden":"true",size:N})}export{h as a};

@@ -1,0 +1,20 @@
+/* Páginas utilitarias (404, error, inicio provisional) y referencia interna de diseño */
+.center-page { min-height: 100dvh; display: grid; place-content: center; justify-items: center; gap: 1.25rem; padding: 4rem var(--gutter); text-align: center; max-width: 40rem; margin-inline: auto; }
+.center-page p { color: var(--muted); font-size: 1.125rem; }
+.center-page__code { font-family: var(--font-display); font-size: 4.5rem; font-weight: 700; color: var(--brand); line-height: 1; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.actions--center { justify-content: center; }
+
+.ds { max-width: 64rem; margin-inline: auto; padding: 3rem var(--gutter); display: grid; gap: 3.5rem; }
+.ds section { display: grid; gap: 1rem; }
+.ds-swatches { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
+.ds-swatch { display: flex; gap: .75rem; align-items: center; border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem; }
+.ds-swatch__chip { width: 3rem; height: 3rem; border-radius: 8px; border: 1px solid var(--line); flex: none; }
+.ds-swatch small { display: block; color: var(--muted); }
+.ds-row { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+.ds-states { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+.ds-list { border: 1px solid var(--line); border-radius: var(--radius-lg); }
+.ds-list li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem; padding: .75rem 1rem; }
+.ds-list li + li { border-top: 1px solid var(--line); }
+.ds-list code { font-size: .875rem; color: var(--muted); overflow-wrap: anywhere; }
+.form-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }

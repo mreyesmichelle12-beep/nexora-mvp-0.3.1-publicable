@@ -1,0 +1,1 @@
+import{b as e,c as a,e as p}from"./chunk-VCRJ4HTT.js";a();var n=e(p());function g({children:t,tag:i="Pendiente",quiet:s=!1}){return(0,n.jsxs)("span",{className:s?"pending pending--quiet":"pending",children:[(0,n.jsx)("span",{className:"pending__tag",children:i}),(0,n.jsx)("span",{children:t})]})}export{g as a};

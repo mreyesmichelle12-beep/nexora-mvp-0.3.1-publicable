@@ -1,0 +1,1 @@
+import{a as r}from"./chunk-JMWX6ACY.js";import{b as a,c as n,e as o}from"./chunk-VCRJ4HTT.js";n();var t=a(o());function s({tone:e="neutral",icon:d,children:c,className:p}){return(0,t.jsxs)("span",{className:r("badge",e!=="neutral"&&`badge--${e}`,p),children:[d,c]})}export{s as a};

@@ -1,0 +1,15 @@
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+const { chromium } = require("/home/claude/.npm-global/lib/node_modules/playwright");
+const [, , path = "/", w = "1440", h = "900", out = "/tmp/shot.png", full = "1", variant = "bare"] = process.argv;
+const { spawn } = await import("node:child_process");
+const srv = spawn("node", ["server.mjs"], { env: { ...process.env, PORT: "4180", VARIANT: variant }, stdio: "ignore" });
+await new Promise((r) => setTimeout(r, 600));
+const b = await chromium.launch({ args: ["--no-sandbox"] });
+const ctx = await b.newContext({ viewport: { width: +w, height: +h } });
+const p = await ctx.newPage();
+const errs = []; p.on("pageerror", (e) => errs.push(e.message)); p.on("console", (m) => m.type() === "error" && errs.push(m.text()));
+await p.goto("http://localhost:4180" + path); await p.waitForSelector("[data-status]"); await p.waitForTimeout(400);
+await p.screenshot({ path: out, fullPage: full === "1" });
+console.log("errores de consola:", errs.length ? errs : "ninguno");
+await b.close(); srv.kill();

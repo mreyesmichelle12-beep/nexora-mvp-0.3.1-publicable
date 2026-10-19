@@ -1,0 +1,1 @@
+import{b as t,c as r,e}from"./chunk-VCRJ4HTT.js";r();var s=t(e(),1);function c({src:i,alt:n,width:o,height:a,style:g,className:l,priority:m,sizes:h,...p}){return(0,s.jsx)("img",{src:i,alt:n,width:o,height:a,style:g,className:l,...p})}export{c as a};

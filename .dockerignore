@@ -1,0 +1,8 @@
+node_modules
+.git
+apps/web/.next
+apps/mvp/data
+tools/mvp/.gen
+tools/preview/dist
+*.log
+.env*
